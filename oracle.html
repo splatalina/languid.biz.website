@@ -13,8 +13,57 @@
 	<main>
 		<h1>Coming soon ...</h1>
 
+		<img id="consult-button" src="https://i.imgur.com/8iTh6Vr.png" width="200px" height="auto">
+
+		<div id="cards">
+			<div>
+				<img src="https://i.imgur.com/jNyssUX.jpeg" width="400px", height="auto">
+				<p><a href="two-buds.html">learn more</a>
+			</div>
+			<div>
+				<img src="https://i.imgur.com/NJFyO1U.jpeg" width="400px", height="auto">
+				<p><a href="washing-machine.html">learn more</a>
+			</div>
+
+			<div>
+				<img src="https://i.imgur.com/JpH9sb7.jpeg" width="400px", height="auto">
+				<p><a href="beetle.html">learn more</a>
+			</div>
+
+			<div>
+				<img src="https://i.imgur.com/xHET3k6.jpeg" width="400px", height="auto">
+				<p><a href="fig.html">learn more</a>
+			</div>
+
+			<div>
+				<img src="https://i.imgur.com/TwY7XJP.jpeg" width="400px", height="auto">
+				<p><a href="necklace.html">learn more</a>
+			</div>
+		</div>
+
 		<p><a href=index.html><img src="https://i.imgur.com/JDSCFEo.png" width="135" height="104"></a></p>
 		
 	</main>
+	<script>
+
+		// hide the cards
+		let cards = document.querySelector("#cards").querySelectorAll("div");
+		cards.forEach((card, index, array) => {
+			card.style.display = "none";
+		})
+
+		// setup the button click
+		let consult = document.querySelector("#consult-button");
+		consult.addEventListener("click", (e) => {
+
+			// hide the consult button
+			e.target.style.display = "none";
+
+			// unhide a random card
+			let card_number = Math.floor(Math.random()*cards.length);
+			cards[card_number].style.display = "block";
+		});
+	
+	</script>
 </body>
 </html>
