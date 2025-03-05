@@ -1,12 +1,8 @@
-#site-title{
-	
+.white-on-black{
+	background-color: black;
+	color: white;
 }
 
-.img-heading{
-	
+.white-on-black a {
+	color: #10FF10;
 }
-
-#grandma-names-heading{
-	
-}
-
