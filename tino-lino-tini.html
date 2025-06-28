@@ -12,6 +12,23 @@
 <body>
 	<main>
 
+	<button onclick="myFunction()">get the bartender's attention</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let text;
+  let person = prompt("Please enter your name:", "???");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "oh hey whats up " + person + ", i've missed you.... here's a little something i know you'll like :)";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
 		<img src="https://i.imgur.com/415HMg4.gif" width="220" height="268">
     
 		<p>
